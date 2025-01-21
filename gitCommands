@@ -1,0 +1,7 @@
+echo "# MeetingRoom-booking-system-backend" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Abdullah-229/MeetingRoom-booking-system-backend.git
+git push -u origin main
