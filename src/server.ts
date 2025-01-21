@@ -1,10 +1,11 @@
 import express from 'express';
 import connectDB from './config/database';
-import userRoutes from './features/user/user.route';
-import adminRoutes from './features/user/admin.route';
-import roomRoutes from './features/room/room.route';
-import bookingRoutes from './features/booking/booking.route';
-import slotRoutes from './features/slot/slot.route'; // slot route assumed to exist based on your requirement
+import userRoutes from './user/user.route';
+import adminRoutes from './user/admin.route';
+import roomRoutes from './room/room.route';
+import bookingRoutes from './booking/booking.route';
+import slotRoutes from './slot/slot.route'; // slot route assumed to exist based on your requirement
+import notificationRoutes from './notifications/notification.route';
 import errorMiddleware from './middlewares/error.middleware';
 
 // Create an instance of Express app
@@ -22,6 +23,7 @@ app.use('/api/admin/users', adminRoutes);
 app.use('/api/rooms', roomRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/slots', slotRoutes); // slot route assumed to exist
+app.use('/api/notifications', notificationRoutes);
 
 // Error handling middleware
 app.use(errorMiddleware);
