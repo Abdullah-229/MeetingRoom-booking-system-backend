@@ -2,7 +2,7 @@ import User from './user.model';
 import { IUser } from './user.interface';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import config from '../config';
+import config from '../../config';
 
 export const createUser = async (userData: IUser) => {
   const salt = await bcrypt.genSalt(10);

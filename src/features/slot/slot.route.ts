@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { addSlot, getSlots, getSlot, updateSlotDetails, removeSlot } from './slot.controller';
-import { validateSchema } from '../middlewares/validate.middleware';
+import { validateSchema } from '../../middlewares/validate.middleware';
 import { slotSchema } from './slot.validation';
-import authMiddleware from '../middlewares/auth.middleware';
+import authMiddleware from '../../middlewares/auth.middleware';
 
 const router = Router();
 
