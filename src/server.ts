@@ -9,6 +9,7 @@ import notificationRoutes from './features/notifications/notification.route';
 import reportRoutes from './features/report/report.route';
 import paymentRoutes from './features/payment/payment.route';
 import feedbackRoutes from './features/feedback/feedback.route';
+import authRoutes from './features/auth/auth.route';
 import errorMiddleware from './middlewares/error.middleware';
 
 // Create an instance of Express app
@@ -30,6 +31,7 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/feedbacks', feedbackRoutes);
+app.use('/api/auth', authRoutes);
 
 // Error handling middleware
 app.use(errorMiddleware);
