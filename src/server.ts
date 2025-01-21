@@ -2,6 +2,7 @@ import express from 'express';
 import connectDB from './config/database';
 import userRoutes from './user/user.route';
 import roomRoutes from './room/room.route';
+import bookingRoutes from './booking/booking.route';
 import errorMiddleware from './middlewares/error.middleware';
 
 // Create an instance of Express app
@@ -16,6 +17,7 @@ app.use(express.json());
 // Define routes
 app.use('/api/users', userRoutes);
 app.use('/api/rooms', roomRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 // Error handling middleware
 app.use(errorMiddleware);
